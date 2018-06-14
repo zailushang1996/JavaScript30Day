@@ -44,3 +44,13 @@ const inputs = document.querySelectorAll('.controls input');
     inputs.forEach(input => input.addEventListener('change', handleUpdate));
     inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 ```
+#demo4
+##关键点
+```js
+const fullNames = inventors.map(inventor => inventor.first + ' ' + inventor.last);
+const __fullNames = inventors.map(inventor => `${inventor.first}  ${inventor.last}`);
+
+const __totalYear = inventors.reduce((total,inventor)=>{
+        return total + inventor.passed - inventor.year;
+        },0);
+```
